@@ -9,9 +9,19 @@ public class EmailTask2 {
         String email = input.next();
         input.close();
 
-        //String firstName =
 
-    }
+        String firstName = email.substring(0,1).toUpperCase()+email.substring(1,email.indexOf("_"));
+
+        String lastName = email.substring(email.indexOf("_")+1,email.indexOf("_")+2).toUpperCase()+email.substring(email.indexOf("_")+2,email.indexOf("@"));
+
+        String domain = email.substring(email.indexOf("@")+1,email.indexOf("."));
+        //domain = email.substring(email.indexOf("@")+1,email.indexOf("2")+2).toUpperCase()+email.substring(email.indexOf("@")+2);
+
+        System.out.println("First name: " + firstName + "\nLast name: " + lastName + "\nDomain: " + domain);
+
+
+
+    }//System.out.println("First name: " + firstName + "\nLast name: " + lastName + "\nDomain: " + domain);
 }
 /*
 STRING TASKS
